@@ -1,0 +1,34 @@
+.goalBar {
+    padding: 32px 0 18px 16px;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+}
+
+.name {
+
+}
+
+.progressBarContainer {
+    background: rgba(255, 207, 96, 0.24);
+    width: 350px;
+    height: 3px;
+}
+
+.progressBar {
+    height: 100%;
+    background: #71BFE2;
+}
+
+.main {
+    display: flex;
+    align-items: baseline;
+}
+
+.helpButton {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    cursor: pointer;
+}
+

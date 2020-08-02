@@ -19,7 +19,9 @@ const projectPinIcon = new L.Icon({
   iconSize: [34, 49],
 });
 
-const Map = () => {
+const Map = ({
+  mapHeight = 600
+}) => {
   const mapRef = useRef(null);
   const [projects = []] = useCommonState('projects.data');
   const [isLoadingProjects = true] = useCommonState('projects.isLoading');
@@ -41,7 +43,7 @@ const Map = () => {
         zoom={INITIAL_ZOOM}
         ref={mapRef}
         style={{
-          height: '600px',
+          height: `${mapHeight}px`,
           transform: 'translate3D(0,0,0)',
         }}
       >
