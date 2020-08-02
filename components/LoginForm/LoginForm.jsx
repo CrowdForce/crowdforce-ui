@@ -44,6 +44,10 @@ const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(0);
 
+  const handleClose = () => {
+    openLoginForm(false);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -81,15 +85,10 @@ const LoginForm = () => {
     if (!errors.length) {
       setLoading(true);
       ajax.post('api/login', formData)
-        .then(() => fetchUser())
-        .then(() => handleClose())
+        .then(() => window.location.reload())
         .catch((error) => setFormErrors({ global: getErrorMessage(error) }))
         .finally(() => setLoading(false));
     }
-  };
-
-  const handleClose = () => {
-    openLoginForm(false);
   };
 
   const handleExited = () => {

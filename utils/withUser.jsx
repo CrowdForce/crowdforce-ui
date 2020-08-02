@@ -6,7 +6,7 @@ function withUser(Component) {
     const { user } = props;
 
     // eslint-disable-next-line react/jsx-props-no-spreading
-    return user.name ? <Component {...props} /> : <Page>Unauthorized</Page>;
+    return user.name ? <Component {...props} /> : <Page>Сообщение для неавторизованного пользователя</Page>;
   }
 
   ProtectedPage.getInitialProps = async ({ req }) => {
